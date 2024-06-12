@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Music Playlist Explorer</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
+    <title>Featured Playlists</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
-<body>
-    <header>
-        <!-- Your header content here -->
+<body class="featured-page">
+    <header class="featured-header">
+            <h1>Featured Playlists</h1>
+        </a>
     </header>
 
-    <main> 
-        <!-- Your main content here -->
+    <nav class="featureNavbar">
+        <a href="playlist.html" class="nav-link">Back to Home Page</a>
+    </nav>
+
+
+    <main class="featured-main">
+        <section class="playlist-details">
+            <div class="playlist-image">
+                <img id="featuredPlaylistImage" src="" alt="Enlarged Playlist Image">
+            </div>
+            <h2 id="featuredPlaylistName" class="playlist-name"></h2>
+        </section>
+
+        <section class="song-list">
+            <h2>Song List</h2>
+            <ul id="featuredSongList">
+                <!-- Song items will be dynamically populated here -->
+            </ul>
+        </section>
     </main>
 
-    <footer>
-        <!-- Your footer content here -->
+    <footer class="featured-footer">
+        <p>Designed by Lucky Beulla Muhoza</p>
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>

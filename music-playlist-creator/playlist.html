@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist Explorer</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="playlist-page">
+    <header>
+        <h1><img src="assets/img/favicon.ico" alt="Logo" class="header-logo">Music Playlist Explorer</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Featured Playlists</a>
+        <button id="addPlaylistButton" class="nav-link">+ Add Playlist</button>
+        <input type="text" id="searchInput" placeholder="Search playlists...">
+    </nav>
+
+    <main class="playlist-main"> 
+        <!-- Playlist Card Container -->
+        <div class="playlist-cards" id="playingCards">
+            <div class="playlist-card">
+                <!-- Cards will be appended here by JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Structure -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-header">
+                <img id="playlistImage" src="/assets/playlist.png" alt="Playlist Cover">
+                <div class="playlist-info">
+                    <h1 id="playlistTitle"></h1>
+                    <p id="playlistCreator"></p>
+                    <p id="playlistLikes"></p>
+                </div>
+                <button class="shuffle-button" id="shuffleButton">Shuffle 🔀</button>
+            </div>
+            <h2>Song List</h2>
+            <ul id="songList">
+                <!-- Songs will be appended here by JS -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer content-->
+    <footer>
+        <p>Designed by Lucky Beulla Muhoza</p>
+    </footer>
+
+    <!-- Add Playlist Modal -->
+    <div id="addPlaylistModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Add New Playlist</h2>
+            <form id="addPlaylistForm">
+                <label for="newPlaylistImage">Image URL:</label>
+                <input type="url" id="newPlaylistImage" name="newPlaylistImage" required>
+                <label for="newPlaylistName">Playlist Name:</label>
+                <input type="text" id="newPlaylistName" name="newPlaylistName" required>
+                <label for="newPlaylistDescription">Description:</label>
+                <textarea id="newPlaylistDescription" name="newPlaylistDescription" required></textarea>
+                <button type="submit">Add Playlist</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="data/data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
